@@ -1,4 +1,4 @@
-FROM node:14-slim
+FROM node:alpine
 WORKDIR /usr/app/src
 RUN pwd 
 RUN ls -al
