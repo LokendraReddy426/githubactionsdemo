@@ -6,7 +6,7 @@ on:
 # Environment variables available to all jobs and steps in this workflow
 env:
     RUN_REGION: us-central1
-    SERVICE_NAME: 186720445880-compute@developer.gserviceaccount.com
+    SERVICE_NAME: nodejsgithubactions
 jobs:
     setup-build-deploy:
         name: Setup, Build, and Deploy
@@ -19,8 +19,8 @@ steps:
             - uses: google-github-actions/setup-gcloud@master
               with:
                   version: '275.0.0'
-                  service_account_email: ${{ secrets.SA_EMAIL }}
-                  service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+                  service_account_email: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
+                  service_account_key: ${{ secrets.SERVICE_NAME}}
             
             # Configure gcloud CLI
             - name: gcloud Set up
