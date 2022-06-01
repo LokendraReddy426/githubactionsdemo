@@ -16,11 +16,11 @@ jobs:
               uses: actions/checkout@v1
             
             # Setup gcloud CLI
-            - uses: google-github-actions/setup-gcloud@master
+            - uses: google-github-actions/setup-gcloud@main
               with:
                   version: '275.0.0'
                   service_account_email: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
-                  service_account_key: ${{ secrets.SERVICE_NAME}}
+                  service_account_key: ${{ secrets.SERVICE_NAME }}
             
             # Configure gcloud CLI
             - name: gcloud Set up
